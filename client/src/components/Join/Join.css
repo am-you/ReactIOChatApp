@@ -1,0 +1,104 @@
+
+html, body {
+    font-family: 'Roboto', monospace;
+    padding: 0;
+    margin: 0;
+}
+
+#root {
+    height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: black;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: black;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: black;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: black;
+}
+
+.logo {
+    margin-top: 25px;
+}
+
+.joinOuterContainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    align-items: center;
+    background-color: lightgray;
+}
+
+.joinInnerContainer {
+    width: 50vw;
+    height: 75vh;
+    background: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px dimgrey;
+}
+
+.joinInput {
+    width: 100%;
+    padding: 10px 25px;
+    margin: 35px 0;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: dimgrey;
+}
+.joinInput:focus {
+    border-bottom: lightgray solid 1px;
+}
+
+.button-container {
+    margin-top: 10px;
+}
+
+.heading {
+    color: black;
+    font-size: 2em;
+    font-weight: lighter;
+    padding-bottom: 10px;
+}
+
+.button {
+    color: darkseagreen;
+    text-transform: uppercase;
+    background: transparent;
+    border: none;
+    width: 15%;
+    padding: 8px 0;
+    font-size: 0.75em;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+.button:hover {
+    color: whitesmoke;
+    background-color: darkseagreen;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .joinOuterContainer {
+        height: 100%;
+    }
+
+    .joinInnerContainer {
+        width: 90%;
+    }
+
+
+}
+
+button:focus {
+    outline: 0;
+}
