@@ -33,13 +33,13 @@ if (!dev) {
     }));
 }
 
-/*
+
 app.use('/', express.static(path.join(__dirname, '../client/build/')));
 
 app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, "../", "client", "build", "index.html"));
 });
- */
+
 
 app.use(router);
 app.use(cors());
@@ -55,10 +55,10 @@ io.on('connection', (socket) => {
             }
 
             socket.emit('message',
-                { user: 'admin', text: `Welcome ${ user.name } to room ${ user.room }` });
+                { user: 'admin', text: `Bienvenue ${ user.name } dans ${ user.room }` });
 
             socket.broadcast.to(user.room).emit('message',
-                { user: 'admin', text: `${ user.name } just joined` });
+                { user: 'admin', text: `${ user.name } s'est connecté(e)` });
 
             socket.join( user.room );
 
